@@ -54,3 +54,13 @@ cart.forEach((cart) => {
 console.log(totalofBoth);
 
 //reduce will be covered on thursday
+
+let cartTotal = cart.reduce(
+    (acc,cartItem) => acc + cartItem.quantity * cartItem.unitPrice,0
+);
+
+let cartQuantityTotal = cart.reduce((acc, cartItem) => 
+acc + cartItem.quantity, 0,
+);
+console.log(`Toplam Sepet tutarı: ${cartTotal} Sepette toplam ${cartQuantityTotal} adet`
+);
